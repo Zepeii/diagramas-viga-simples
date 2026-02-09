@@ -4,7 +4,6 @@ import scipy.integrate as sc
 import streamlit as st
 import io
 import contextlib
-import plotly.graph_objects as go
 
 def criar_funcao_distribuida(expr):
     allowed = {
@@ -485,5 +484,6 @@ if st.button("Calcular"):
     if saida["status"] == "erro":
         st.error(saida["mensagem"])
         st.stop()
+
 
     st.pyplot(saida["fig"])
